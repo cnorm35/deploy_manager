@@ -38,6 +38,10 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 5.0.5"
 
+gem "slack-ruby-client"
+gem "async-websocket", "~> 0.8.0"
+gem "octopoller"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
