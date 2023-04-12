@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_12_135819) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_12_140512) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -287,6 +287,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_12_135819) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.datetime "verified_at", precision: nil
+  end
+
+  create_table "webhooks_incoming_github_webhooks", force: :cascade do |t|
+    t.jsonb "data"
+    t.datetime "processed_at"
+    t.datetime "verified_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "webhooks_incoming_oauth_stripe_account_webhooks", force: :cascade do |t|

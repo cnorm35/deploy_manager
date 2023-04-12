@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   namespace :webhooks do
     namespace :incoming do
+      resources :github_webhooks
       resources :bullet_train_webhooks
       namespace :oauth do
         # 🚅 super scaffolding will insert new oauth provider webhooks above this line.
