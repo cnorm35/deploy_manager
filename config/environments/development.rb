@@ -91,6 +91,9 @@ Rails.application.configure do
   if (gitpod_workspace_url = ENV["GITPOD_WORKSPACE_URL"])
     config.hosts << /.*#{URI.parse(gitpod_workspace_url).host}/
   end
+  # config.hosts << /[a-z0-9-]+\.ngrok-free\.app/
+
+  config.hosts = nil
 
   config.action_mailer.delivery_method = :letter_opener
   config.active_job.queue_adapter = :sidekiq

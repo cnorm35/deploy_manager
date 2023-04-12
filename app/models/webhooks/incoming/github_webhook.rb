@@ -5,7 +5,8 @@ class Webhooks::Incoming::GithubWebhook < ApplicationRecord
   # You can implement your authenticity verification logic in either
   # the newly scaffolded model or controller for your incoming webhooks.
   def verify_authenticity
-    true
+    # true
+    false
   end
 
   def process
